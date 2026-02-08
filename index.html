@@ -3,205 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Science  🌌</title>
+<title>🌌 The Science World 🌌</title>
 <style>
-  /* Body and background */
-  body {
-    margin: 0;
-    font-family: "Georgia", serif;
-    background: #000010; /* dark space behind everything */
-    color: #000;
-  }
-
-  /* Stars Background */
-  #stars {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: black;
-    overflow: hidden;
-  }
-  .star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation: twinkle 3s infinite alternate;
-  }
-  @keyframes twinkle {
-    from {opacity: 0.2;}
-    to {opacity: 1;}
-  }
-
-  /* Header */
-  header {
-    background: rgba(248,249,250,0.95);
-    padding: 20px;
-    text-align: center;
-    font-size: 2em;
-    border-bottom: 1px solid #ccc;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  /* Sidebar Navigation */
-  nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 220px;
-    height: calc(100% - 80px);
-    background: rgba(241,241,241,0.95);
-    padding: 20px;
-    overflow-y: auto;
-    border-right: 1px solid #ccc;
-  }
-  nav h3 {
-    margin-top: 0;
-  }
-  nav a {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    margin: 8px 0;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  /* Main content */
-  main {
-    margin-left: 240px;
-    padding: 20px;
-    max-width: 900px;
-    background: rgba(255,255,255,0.95);
-    min-height: 100vh;
-  }
-  h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-  }
-  h3 {
-    margin-top: 20px;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 15px;
-    border-top: 1px solid #ccc;
-    margin-top: 50px;
-    font-size: 0.9em;
-    color: #555;
-    background: rgba(248,249,250,0.95);
-  }
-
-  /* Emphasis styling for professor voice */
-  .professor {
-    font-style: italic;
-    color: #222;
-  }
+  body {margin:0;font-family:Georgia, serif;background:#000010;color:#fff;}
+  header {background:rgba(20,20,30,0.95);padding:20px;position:sticky;top:0;z-index:10;}
+  header nav a {color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;}
+  header nav a:hover{text-decoration:underline;}
+  #tabs {margin-top:10px;}
+  .tab-button {padding:8px 15px;margin:0 5px;border:none;border-radius:5px;cursor:pointer;}
+  .tab-button.active {background:#444;color:#fff;}
+  main {padding:20px;max-width:1000px;margin:auto;}
+  section {margin-bottom:50px;}
+  h1,h2,h3 {color:#fffa;}
+  button.experiment {padding:5px 10px;margin:5px;background:#ff8800;border:none;border-radius:4px;cursor:pointer;}
+  button.experiment:hover{background:#ffaa33;}
+  .gallery img{max-width:200px;margin:10px;border-radius:8px;cursor:pointer;}
+  footer{text-align:center;padding:20px;background:rgba(20,20,30,0.95);color:#aaa;}
+  .section-adult,.section-kids{display:none;}
 </style>
 </head>
 <body>
 
-<!-- Stars Background -->
-<div id="stars"></div>
-
 <header>
-  Science  🌌
+  🌌 The Science World 🌌
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experiments">Experiments</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+  <div id="tabs">
+    <button class="tab-button active" onclick="showTab('adult')">Adults</button>
+    <button class="tab-button" onclick="showTab('kids')">Kids</button>
+  </div>
 </header>
 
-<nav>
-  <h3>Contents</h3>
-  <a href="#space">Space</a>
-  <a href="#earth">Earth Science</a>
-  <a href="#biology">Biology</a>
-  <a href="#chemistry">Chemistry</a>
-  <a href="#physics">Physics</a>
-</nav>
-
 <main>
-  <!-- SPACE -->
-  <section id="space">
-    <h2>Space</h2>
-    <p class="professor">Ah, welcome young explorers! Space is the grand stage where the universe performs its magnificent show. Stars sparkle like distant lanterns, planets dance around their suns, and galaxies spin like cosmic pinwheels. Today, we'll journey beyond Earth and see the wonders of our celestial neighborhood.</p>
-    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/potw2149a.jpg" alt="Galaxy">
-    <h3>Planets</h3>
-    <p class="professor">Planets are gigantic balls of rock or gas that orbit stars. Imagine Earth, our cozy home, spinning gracefully around the Sun. Each planet has its personality: Jupiter is a giant gas ball with raging storms, while Mercury races around the Sun in just 88 days!</p>
-    <h3>Stars</h3>
-    <p class="professor">Stars are glowing balls of hydrogen and helium, producing energy through nuclear fusion. Our Sun, a modest star, gives life to our planet. Some stars are massive, some tiny, and they live for millions to billions of years. Fascinating, isn’t it?</p>
-    <h3>Galaxies</h3>
-    <p class="professor">Galaxies are cosmic cities of stars, dust, and gas. Our home, the Milky Way, contains over 100 billion stars! Galaxies can collide, twist, and form stunning shapes. It’s like watching the universe’s grand ballet unfold before your eyes.</p>
-  </section>
 
-  <!-- EARTH SCIENCE -->
-  <section id="earth">
-    <h2>Earth Science</h2>
-    <p class="professor">Earth is a marvelous planet full of wonders! Earth science teaches us how land, oceans, atmosphere, and life interact in a delicate balance. Let’s peek beneath the surface and explore mountains, volcanoes, and weather phenomena.</p>
-    <h3>Volcanoes</h3>
-    <p class="professor">Volcanoes are openings in Earth's crust where molten rock, or magma, bursts forth. These fiery mountains shape landscapes and create new land. While powerful, volcanoes are also nature’s way of renewing the Earth!</p>
-    <h3>Weather</h3>
-    <p class="professor">Weather is the daily mood of our atmosphere. It can be sunny, rainy, snowy, or windy. Meteorologists study patterns to forecast storms and help keep people safe. Isn’t it amazing how the air above us constantly moves and changes?</p>
-  </section>
+<!-- ADULT SECTION -->
+<div class="section-adult" id="adult">
 
-  <!-- BIOLOGY -->
-  <section id="biology">
-    <h2>Biology</h2>
-    <p class="professor">Biology is the study of life in all its forms. From microscopic bacteria to towering trees and enormous whales, life is endlessly fascinating. Let’s dive into cells, animals, and plants!</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cell_Nucleus_Human.jpg" alt="Cell">
-    <h3>Cells</h3>
-    <p class="professor">Cells are the tiny building blocks of life. Each cell is like a miniature factory, performing many essential tasks to keep organisms alive. Without cells, life as we know it wouldn’t exist.</p>
-    <h3>Plants & Animals</h3>
-    <p class="professor">Plants capture sunlight and make food through photosynthesis, while animals consume plants or other animals. Together, they maintain the balance of ecosystems. Nature is truly a symphony of life!</p>
-  </section>
+<section id="home">
+<h1>Welcome to the Universe of Science!</h1>
+<p>Explore the wonders of the cosmos, amazing experiments, and fascinating scientific concepts across physics, chemistry, biology, and astronomy. Dive deep into research, theory, and practical demonstrations.</p>
+</section>
 
-  <!-- CHEMISTRY -->
-  <section id="chemistry">
-    <h2>Chemistry</h2>
-    <p class="professor">Chemistry is the science that unveils the secrets of matter. Everything around us — water, air, food, even ourselves — is made of atoms and molecules. By studying reactions, chemists discover how substances transform and interact.</p>
-    <h3>Elements</h3>
-    <p class="professor">Elements are pure substances, like hydrogen, oxygen, and carbon. They are the alphabet of matter, and when combined, they form the vast library of compounds we see around us.</p>
-    <h3>Reactions</h3>
-    <p class="professor">Chemical reactions are like nature’s magic tricks — substances combine, separate, and form entirely new substances. For example, mixing baking soda and vinegar creates a fizzy eruption, showing the power of chemistry!</p>
-  </section>
+<section id="about">
+<h2>About Science</h2>
+<p>Science is the systematic study of the natural world through observation, experimentation, and analysis. From subatomic particles to galactic superclusters, understanding the universe involves curiosity, critical thinking, and evidence-based reasoning. Explore links, conduct experiments, and engage with the scientific method.</p>
+</section>
 
-  <!-- PHYSICS -->
-  <section id="physics">
-    <h2>Physics</h2>
-    <p class="professor">Physics explains how the universe behaves. From falling apples to orbiting planets, from lightning bolts to moving cars, physics uncovers the rules behind all motion and energy.</p>
-    <h3>Motion</h3>
-    <p class="professor">Motion is the change in position of objects over time. Newton’s laws explain why things move, stop, or change direction. Physics lets us predict the motion of everything from tiny particles to massive planets!</p>
-    <h3>Energy</h3>
-    <p class="professor">Energy is the ability to do work. It can be stored, transformed, or transferred. Kinetic energy moves objects, potential energy waits to be released, and thermal energy warms the universe!</p>
-  </section>
+<section id="experiments">
+<h2>Fun Experiments</h2>
+<p><strong>Volcano Eruption 🌋</strong><br>Mix baking soda and vinegar and observe the chemical reaction creating an erupting foam volcano.</p>
+<button class="experiment" onclick="tryExperiment('adult')">I tried it!</button>
+
+<p><strong>Invisible Ink ✒️</strong><br>Write with lemon juice, gently heat the paper, and reveal the hidden message.</p>
+<button class="experiment" onclick="tryExperiment('adult')">I tried it!</button>
+
+<p>Experiments Tried: <span id="adult-count">0</span></p>
+</section>
+
+<section id="gallery">
+<h2>Science Gallery</h2>
+<div class="gallery">
+<img src="https://www.nasa.gov/sites/default/files/thumbnails/image/potw2149a.jpg" alt="Galaxy">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cell_Nucleus_Human.jpg" alt="Cell">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Volcano_Eruption.jpg/320px-Volcano_Eruption.jpg" alt="Volcano Experiment">
+</div>
+</section>
+
+</div>
+
+<!-- KIDS SECTION -->
+<div class="section-kids" id="kids">
+
+<section id="home-kids">
+<h1>Welcome to Science World for Kids!</h1>
+<p>Learn about space, fun experiments, and amazing nature facts in a fun and simple way!</p>
+</section>
+
+<section id="about-kids">
+<h2>About Science</h2>
+<p>Science helps us understand the world. You can learn how planets move, how plants grow, or how chemicals react in fun ways!</p>
+</section>
+
+<section id="experiments-kids">
+<h2>Fun Experiments</h2>
+<p><strong>Volcano Eruption 🌋</strong><br>Mix baking soda and vinegar and watch the volcano erupt!</p>
+<button class="experiment" onclick="tryExperiment('kids')">I tried it!</button>
+
+<p><strong>Invisible Ink ✒️</strong><br>Write with lemon juice and see the secret message appear when warmed up!</p>
+<button class="experiment" onclick="tryExperiment('kids')">I tried it!</button>
+
+<p>Experiments Tried: <span id="kids-count">0</span></p>
+</section>
+
+<section id="gallery-kids">
+<h2>Science Gallery</h2>
+<div class="gallery">
+<img src="https://www.nasa.gov/sites/default/files/thumbnails/image/potw2149a.jpg" alt="Galaxy">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cell_Nucleus_Human.jpg" alt="Cell">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Volcano_Eruption.jpg/320px-Volcano_Eruption.jpg" alt="Volcano Experiment">
+</div>
+</section>
+
+</div>
+
 </main>
 
 <footer>
-  &copy; 2026 Science Wiki for Kids | Taught by Professor AI
+© 2026 My Science World | Made with ❤️ for Science
 </footer>
 
 <script>
-  // Stars Background Animation
-  const starsDiv = document.getElementById('stars');
-  for (let i = 0; i < 150; i++) {
-    const star = document.createElement('div');
-    star.classList.add('star');
-    const size = Math.random() * 3 + 1 + 'px';
-    star.style.width = size;
-    star.style.height = size;
-    star.style.top = Math.random() * window.innerHeight + 'px';
-    star.style.left = Math.random() * window.innerWidth + 'px';
-    star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-    starsDiv.appendChild(star);
+  // Tab switching
+  function showTab(tab){
+    document.querySelector('.section-adult').style.display = tab==='adult'?'block':'none';
+    document.querySelector('.section-kids').style.display = tab==='kids'?'block':'none';
+    document.querySelectorAll('.tab-button').forEach(b=>b.classList.remove('active'));
+    document.querySelector(`.tab-button[onclick="showTab('${tab}')"]`).classList.add('active');
+  }
+  showTab('adult'); // default
+
+  // Experiments counter
+  let adultCount=0, kidsCount=0;
+  function tryExperiment(type){
+    if(type==='adult'){adultCount++; document.getElementById('adult-count').textContent=adultCount;}
+    else{kidsCount++; document.getElementById('kids-count').textContent=kidsCount;}
   }
 </script>
 
