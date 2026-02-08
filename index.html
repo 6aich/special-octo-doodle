@@ -3,69 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌌 My Science World 🌌</title>
+<title>Science  🌌</title>
 <style>
-  /* General Styles */
+  /* Body and background */
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background: #0d1b2a;
-    overflow-x: hidden;
-  }
-  header {
-    text-align: center;
-    font-size: 2.5em;
-    padding: 20px;
-    background: #1b263b;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #415a77;
-  }
-  nav a {
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  nav a:hover {
-    background: #778da9;
-    border-radius: 5px;
-  }
-  section {
-    padding: 60px 20px;
-    min-height: 100vh;
-    text-align: center;
-    position: relative;
-  }
-  h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  footer {
-    background: #1b263b;
-    padding: 20px;
-    text-align: center;
+    font-family: "Georgia", serif;
+    background: #000010; /* dark space behind everything */
+    color: #000;
   }
 
-  /* Animated Stars Background */
-  .stars {
+  /* Stars Background */
+  #stars {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: transparent;
-    z-index: 0;
+    z-index: -1;
+    background: black;
+    overflow: hidden;
   }
   .star {
     position: absolute;
@@ -79,95 +34,163 @@
     to {opacity: 1;}
   }
 
-  /* Button */
-  .btn {
-    background: #778da9;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    margin-top: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  .btn:hover {
-    background: #415a77;
-  }
-
-  /* Experiment Box */
-  .experiment {
-    background: #1b263b;
-    border: 2px solid #778da9;
-    border-radius: 10px;
+  /* Header */
+  header {
+    background: rgba(248,249,250,0.95);
     padding: 20px;
-    margin: 20px auto;
-    max-width: 500px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 
-  /* Counter */
-  #counter {
-    font-size: 2em;
+  /* Sidebar Navigation */
+  nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 220px;
+    height: calc(100% - 80px);
+    background: rgba(241,241,241,0.95);
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+  }
+  nav h3 {
+    margin-top: 0;
+  }
+  nav a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin: 8px 0;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main content */
+  main {
+    margin-left: 240px;
+    padding: 20px;
+    max-width: 900px;
+    background: rgba(255,255,255,0.95);
+    min-height: 100vh;
+  }
+  h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  h3 {
     margin-top: 20px;
-    color: #f0a500;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #555;
+    background: rgba(248,249,250,0.95);
+  }
+
+  /* Emphasis styling for professor voice */
+  .professor {
+    font-style: italic;
+    color: #222;
   }
 </style>
 </head>
 <body>
 
 <!-- Stars Background -->
-<div class="stars" id="stars"></div>
+<div id="stars"></div>
 
 <header>
-  🌌 The Science World 🌌
+  Science  🌌
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#experiments">Experiments</a>
-  <a href="#gallery">Gallery</a>
+  <h3>Contents</h3>
+  <a href="#space">Space</a>
+  <a href="#earth">Earth Science</a>
+  <a href="#biology">Biology</a>
+  <a href="#chemistry">Chemistry</a>
+  <a href="#physics">Physics</a>
 </nav>
 
-<section id="home">
-  <h2>Welcome to the Universe of Science!</h2>
-  <p>Explore the wonders of the cosmos, amazing experiments, and fascinating facts from around the world.</p>
-  <button class="btn" onclick="alert('Have fun exploring science! 🚀')">Start Exploring</button>
-</section>
+<main>
+  <!-- SPACE -->
+  <section id="space">
+    <h2>Space</h2>
+    <p class="professor">Ah, welcome young explorers! Space is the grand stage where the universe performs its magnificent show. Stars sparkle like distant lanterns, planets dance around their suns, and galaxies spin like cosmic pinwheels. Today, we'll journey beyond Earth and see the wonders of our celestial neighborhood.</p>
+    <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/potw2149a.jpg" alt="Galaxy">
+    <h3>Planets</h3>
+    <p class="professor">Planets are gigantic balls of rock or gas that orbit stars. Imagine Earth, our cozy home, spinning gracefully around the Sun. Each planet has its personality: Jupiter is a giant gas ball with raging storms, while Mercury races around the Sun in just 88 days!</p>
+    <h3>Stars</h3>
+    <p class="professor">Stars are glowing balls of hydrogen and helium, producing energy through nuclear fusion. Our Sun, a modest star, gives life to our planet. Some stars are massive, some tiny, and they live for millions to billions of years. Fascinating, isn’t it?</p>
+    <h3>Galaxies</h3>
+    <p class="professor">Galaxies are cosmic cities of stars, dust, and gas. Our home, the Milky Way, contains over 100 billion stars! Galaxies can collide, twist, and form stunning shapes. It’s like watching the universe’s grand ballet unfold before your eyes.</p>
+  </section>
 
-<section id="about">
-  <h2>About Science</h2>
-  <p>Science is the key to understanding how the universe works—from the tiniest atoms to the largest galaxies. Discover the magic of nature, physics, chemistry, and biology here!</p>
-</section>
+  <!-- EARTH SCIENCE -->
+  <section id="earth">
+    <h2>Earth Science</h2>
+    <p class="professor">Earth is a marvelous planet full of wonders! Earth science teaches us how land, oceans, atmosphere, and life interact in a delicate balance. Let’s peek beneath the surface and explore mountains, volcanoes, and weather phenomena.</p>
+    <h3>Volcanoes</h3>
+    <p class="professor">Volcanoes are openings in Earth's crust where molten rock, or magma, bursts forth. These fiery mountains shape landscapes and create new land. While powerful, volcanoes are also nature’s way of renewing the Earth!</p>
+    <h3>Weather</h3>
+    <p class="professor">Weather is the daily mood of our atmosphere. It can be sunny, rainy, snowy, or windy. Meteorologists study patterns to forecast storms and help keep people safe. Isn’t it amazing how the air above us constantly moves and changes?</p>
+  </section>
 
-<section id="experiments">
-  <h2>Fun Experiments</h2>
-  <div class="experiment">
-    <h3>Volcano Eruption 🌋</h3>
-    <p>Mix baking soda and vinegar in a cup and watch the chemical reaction erupt like a volcano!</p>
-    <button class="btn" onclick="increaseCounter()">I tried it!</button>
-  </div>
-  <div class="experiment">
-    <h3>Invisible Ink ✒️</h3>
-    <p>Write with lemon juice on paper. Heat it slightly and watch the secret message appear!</p>
-    <button class="btn" onclick="increaseCounter()">I tried it!</button>
-  </div>
-  <div id="counter">Experiments Tried: 0</div>
-</section>
+  <!-- BIOLOGY -->
+  <section id="biology">
+    <h2>Biology</h2>
+    <p class="professor">Biology is the study of life in all its forms. From microscopic bacteria to towering trees and enormous whales, life is endlessly fascinating. Let’s dive into cells, animals, and plants!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cell_Nucleus_Human.jpg" alt="Cell">
+    <h3>Cells</h3>
+    <p class="professor">Cells are the tiny building blocks of life. Each cell is like a miniature factory, performing many essential tasks to keep organisms alive. Without cells, life as we know it wouldn’t exist.</p>
+    <h3>Plants & Animals</h3>
+    <p class="professor">Plants capture sunlight and make food through photosynthesis, while animals consume plants or other animals. Together, they maintain the balance of ecosystems. Nature is truly a symphony of life!</p>
+  </section>
 
-<section id="gallery">
-  <h2>Science Gallery</h2>
-  <p>Look at amazing space images, microscopic worlds, and colorful experiments!</p>
-  <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/potw2149a.jpg" width="300" alt="Galaxy">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cell_Nucleus_Human.jpg" width="300" alt="Cell">
-</section>
+  <!-- CHEMISTRY -->
+  <section id="chemistry">
+    <h2>Chemistry</h2>
+    <p class="professor">Chemistry is the science that unveils the secrets of matter. Everything around us — water, air, food, even ourselves — is made of atoms and molecules. By studying reactions, chemists discover how substances transform and interact.</p>
+    <h3>Elements</h3>
+    <p class="professor">Elements are pure substances, like hydrogen, oxygen, and carbon. They are the alphabet of matter, and when combined, they form the vast library of compounds we see around us.</p>
+    <h3>Reactions</h3>
+    <p class="professor">Chemical reactions are like nature’s magic tricks — substances combine, separate, and form entirely new substances. For example, mixing baking soda and vinegar creates a fizzy eruption, showing the power of chemistry!</p>
+  </section>
+
+  <!-- PHYSICS -->
+  <section id="physics">
+    <h2>Physics</h2>
+    <p class="professor">Physics explains how the universe behaves. From falling apples to orbiting planets, from lightning bolts to moving cars, physics uncovers the rules behind all motion and energy.</p>
+    <h3>Motion</h3>
+    <p class="professor">Motion is the change in position of objects over time. Newton’s laws explain why things move, stop, or change direction. Physics lets us predict the motion of everything from tiny particles to massive planets!</p>
+    <h3>Energy</h3>
+    <p class="professor">Energy is the ability to do work. It can be stored, transformed, or transferred. Kinetic energy moves objects, potential energy waits to be released, and thermal energy warms the universe!</p>
+  </section>
+</main>
 
 <footer>
-  &copy; 2012 the  Science World | Made with ❤️ for Science
+  &copy; 2026 Science Wiki for Kids | Taught by Professor AI
 </footer>
 
 <script>
-  // Star Animation
+  // Stars Background Animation
   const starsDiv = document.getElementById('stars');
   for (let i = 0; i < 150; i++) {
     const star = document.createElement('div');
@@ -179,13 +202,6 @@
     star.style.left = Math.random() * window.innerWidth + 'px';
     star.style.animationDuration = (Math.random() * 3 + 2) + 's';
     starsDiv.appendChild(star);
-  }
-
-  // Experiment Counter
-  let counter = 0;
-  function increaseCounter() {
-    counter++;
-    document.getElementById('counter').innerText = "Experiments Tried: " + counter;
   }
 </script>
 
